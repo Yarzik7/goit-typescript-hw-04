@@ -31,7 +31,7 @@ export function Observer({ children, onContentEndVisible }: Props) {
       observer.observe(endContentRef.current);
     }
 
-    return () => {
+    return (): void => {
       observer.disconnect();
     };
   }, [onContentEndVisible]);

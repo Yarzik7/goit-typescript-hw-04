@@ -39,7 +39,7 @@ export function RequestComponent() {
     initialState
   );
 
-  const startRequest = () => {
+  const startRequest = (): void => {
     requestDispatch({ type: "START_REQUEST" });
     // Імітуємо запит до сервера
     setTimeout(() => {
@@ -51,7 +51,7 @@ export function RequestComponent() {
     }, 2000);
   };
 
-  const resetRequest = () => {
+  const resetRequest = (): void => {
     requestDispatch({ type: "RESET_REQUEST" });
   };
 
